@@ -1,0 +1,54 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.jpeg'); /* Ganti 'background-image.jpg' dengan path gambar yang diinginkan */
+    background-size: 100% 100%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#quiz-container {
+    background-color: #77645e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+#question-container {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.option-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.option-btn:hover {
+    background-color: #45a049;
+}
+
+#result-container {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#result-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
