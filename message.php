@@ -2,7 +2,10 @@
 						<div class="col-md-2 col-sm-2">
 						</div>
 						<div class="col-md-6 mb-5">
-								<input style="text-align: center; width: 100%"  type="text" class="form-control"  name="name" id="name" placeholder="Enter Name" required>
+								<input style="text-align: center; width: 100%"  type="text" class="form-control"  name="name" id="name" placeholder="Enter Name" required
+								<?php if (!$_SESSION['guestMode'] && isset($_SESSION['user'])) : ?>
+									value="<?= $_SESSION['user'] ?>"
+								<?php endif; ?>>
 						</div>
 
                         <div class="col-md-6 mb-5">

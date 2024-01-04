@@ -40,7 +40,7 @@
 							</div>
 						</div>
 						<div class="col-md-4">
-							<button type="submit" name="attend" class="btn btn-default btn-block">Submit</button>
+							<input type="submit" name="attend" class="btn btn-default btn-block">Submit</button>
 						</div>
 						<div class="col-md-2 col-sm-2"></div>	
 					</form>
@@ -57,17 +57,4 @@
         document.querySelector('input[name="number"]').removeAttribute('required');
     }
 
-	// function validateForm() {
-    //         const attendance = document.querySelector('input[name="attendance"]:checked').value;
-    //         if (attendance === 'Yes') {
-    //             const guestInput = document.querySelector('input[name="guest"]');
-    //             const numberInput = document.querySelector('input[name="number"]');
-                
-    //             if (guestInput.value === '' || numberInput.value === '') {
-    //                 alert('Please fill in the required fields.');
-    //                 return false;
-    //             }
-    //         }
-    //         return true; // Form submission continues if validation passes
-    //     }
 </script>

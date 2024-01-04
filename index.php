@@ -1,4 +1,6 @@
-<?php include 'connect.php'; ?>
+<?php include 'connect.php'; 
+	  include 'session.php';
+?>
 <!DOCTYPE html>
 <html class="no-js">
 	<head>
@@ -90,7 +92,7 @@
 								// }
 							?>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+							<p><a href="#" class="btn btn-default btn-sm">Dear <?=$_SESSION['user']?></a></p>
 						</div>
 					</div>
 				</div>
@@ -373,7 +375,7 @@
 				<?php
 					require 'message.php';
 				?>
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-md-12 animate-box">
 						<div class="wrap-testimony">
 							<div class="owl-carousel-fullwidth">
@@ -386,7 +388,49 @@
 							</div>
 						</div>
 					</div>
+				</div> -->
+				<div class="items-pagination" id="paginationContainer" >
+					<!-- <div class="item">
+						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">Nathan</span><p>2023-12-05 08:31:43</p><blockquote style="background-color: #8f989f"><p style="color: white;">Bless</p></blockquote></div>
+					</div>
+					<div class="item">
+						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">B</span><p>2023-12-05 08:31:43</p><blockquote style="background-color: #8f989f"><p style="color: white;">Bless</p></blockquote></div>
+					</div>
+					<div class="item">
+						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">c</span><p>2023-12-05 08:31:43</p><blockquote style="background-color: #8f989f"><p style="color: white;">Bless</p></blockquote></div>
+					</div>
+					<div class="item">
+						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">d</span><p>2023-12-05 08:31:43</p><blockquote style="background-color: #8f989f"><p style="color: white;">Bless</p></blockquote></div>
+					</div>
+					<div class="item">
+						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">Nathan</span><p>2023-12-05 08:31:43</p><blockquote style="background-color: #8f989f"><p style="color: white;">Bless</p></blockquote></div>
+					</div>
+					<div class="item">
+						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">B</span><p>2023-12-05 08:31:43</p><blockquote style="background-color: #8f989f"><p style="color: white;">Bless</p></blockquote></div>
+					</div>
+					<div class="item">
+						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">c</span><p>2023-12-05 08:31:43</p><blockquote style="background-color: #8f989f"><p style="color: white;">Bless</p></blockquote></div>
+					</div>
+					<div class="item">
+						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">d</span><p>2023-12-05 08:31:43</p><blockquote style="background-color: #8f989f"><p style="color: white;">Bless</p></blockquote></div>
+					</div>
+					 -->
+					 <?php
+					require 'wishes.php';
+				?>
 				</div>
+
+				<div class="row">
+					<div class="col-md-12" style="display: flex; justify-content: center;">
+					<div class="pagination">
+						<button id="prev" class="btn btn-primary" disabled>Previous</button>
+						<button id="next" class="btn btn-primary">Next</button>
+					</div>
+					</div>
+				</div>
+				
+
+
 			</div>
 		</div>
 	</div>
@@ -421,7 +465,11 @@
 
 					?>
 					
-					<?php require 'rsvp.php'; ?>
+					<?php if($_SESSION['editMode'] === false) {
+						require 'rsvp.php';
+					} else {
+						require 'rsvpEdit.php';
+					} ?>
 				</div>
 			</div>
 			</div>
@@ -495,6 +543,7 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<script src="js/pagination.js"></script>
 	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
 	<script>
 	
@@ -533,6 +582,7 @@
         dialog.close();
       }
     }
+
 		</script>
 	</body>
 </html>
