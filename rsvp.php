@@ -40,7 +40,7 @@
 							</div>
 						</div>
 						<div class="col-md-4">
-							<input type="submit" name="attend" class="btn btn-default btn-block">Submit</button>
+							<input type="submit" name="attend" class="btn btn-default btn-block" value="Submit">
 						</div>
 						<div class="col-md-2 col-sm-2"></div>	
 					</form>

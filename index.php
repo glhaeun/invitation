@@ -32,6 +32,9 @@
 
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
@@ -58,7 +61,7 @@
 					<div id="fh5co-logo"><a href="index.html"></a></div>
 				</div>
 				<div class="col-xs-5 text-right menu-1">
-					<ul>
+					<ul id="myNav">
 						<li class="active"><a href="#home">Home</a></li>
 						<li><a href="#location">Location</a></li>
 						<li><a href="#story">Story</a></li>
@@ -199,7 +202,7 @@
       <div class="row">
         <div class="col">
           <ul class="timeline">
-            <li >
+            <li class="timeline-inverted fadeInLeft animated">
               <div class="timeline-image" style="background-image: url(images/couple-1.jpg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -213,7 +216,7 @@
               </div>
 
             </li>
-			<li>
+			<li class="fadeInRight animated">
               <div class="timeline-image" style="background-image: url(images/couple-1.jpg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -227,7 +230,7 @@
               </div>
 
             </li>
-            <li class="timeline-inverted">
+            <li class="timeline-inverted fadeInLeft animated">
               <div class="timeline-image" style="background-image: url(images/couple-2.jpg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -242,7 +245,7 @@
               </div>
 
             </li>
-            <li>
+            <li class="fadeInRight animated">
               <div class="timeline-image" style="background-image: url(images/bride.jpg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -490,12 +493,12 @@
 					<div class="display-tc">
 						<div class="col-md-10 col-md-offset-1">
 							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
+								<div class="event-wrap animate-box gift-box">
 									<h3>Groom</h3>
 										<i class="icon-clock"></i>
 										<span>BCA</span>
-										<span>123123123</span>
-										<p><a class="btn btn-default btn-sm">Copy</a></p>
+										<span id="groom_rek">123123123</span>
+    									<p><a class="btn btn-default btn-sm copy-btn-groom">Copy</a></p>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
@@ -503,8 +506,8 @@
 									<h3>Bride</h3>
 									<i class="icon-clock"></i>
 									<span>BCA</span>
-									<span>123123123</span>
-									<p><a class="btn btn-default btn-sm">Copy</a></p>
+									<span id="bride_rek">123123123</span>
+									<p><a class="btn btn-default btn-sm copy-btn-bride">Copy</a></p>
 								</div>
 							</div>
 						</div>
@@ -517,7 +520,7 @@
 	</div>
 
 	<div class="gototop js-top">
-		<a href="#" class="audio"><i class="icon-arrow-up"></i></a>
+		<a href="#" id="audio"><i class="icon-volume" id="audio-icon"></i></a>
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	
@@ -545,9 +548,84 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="js/pagination.js"></script>
-	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
 	<script>
+
+	document.addEventListener('DOMContentLoaded', function() {
+		var copyBtnGroom = document.querySelector('.copy-btn-groom');
+		var groomRek = document.getElementById('groom_rek');
+
+		copyBtnGroom.addEventListener('click', function() {
+			var groomNumber = groomRek.innerText;
+
+			// Create a temporary textarea element to hold the text to copy
+			var textarea = document.createElement('textarea');
+			textarea.value = groomNumber;
+			document.body.appendChild(textarea);
+
+			// Select and copy the text
+			textarea.select();
+			document.execCommand('copy');
+
+			// Remove the textarea
+			document.body.removeChild(textarea);
+
+			Toastify({
+				text: 'Groom\'s bank number copied: ' + groomNumber,
+				duration: 3000, // Display duration in milliseconds
+				close: true, // Show close button
+				gravity: 'bottom', // Toast position
+				backgroundColor: '#e8d5c4', // Example background color
+			}).showToast();
+		
+		});
+	});
+
+	document.addEventListener('DOMContentLoaded', function() {
+		var copyBtnBride = document.querySelector('.copy-btn-bride');
+		var brideRek = document.getElementById('bride_rek');
+
+		copyBtnBride.addEventListener('click', function() {
+			var brideNumber = brideRek.innerText;
+
+			// Create a temporary textarea element to hold the text to copy
+			var textarea = document.createElement('textarea');
+			textarea.value = brideNumber;
+			document.body.appendChild(textarea);
+
+			// Select and copy the text
+			textarea.select();
+			document.execCommand('copy');
+
+			// Remove the textarea
+			document.body.removeChild(textarea);
+
+			Toastify({
+				text: 'Bride\'s bank number copied: ' + brideNumber,
+				duration: 3000, // Display duration in milliseconds
+				close: true, // Show close button
+				gravity: 'bottom', // Toast position
+				backgroundColor: '#e8d5c4', // Example background color
+			}).showToast();
+		
+		});
+	});
+
 	
+	// Get all the navigation links
+	var links = document.querySelectorAll('#myNav li a');
+
+	// Loop through each link and add a click event listener
+	links.forEach(function(link) {
+		link.addEventListener('click', function() {
+			// Remove the 'active' class from all links
+			links.forEach(function(link) {
+				link.parentNode.classList.remove('active');
+			});
+			
+			// Add the 'active' class to the clicked link's parent (the <li> element)
+			this.parentNode.classList.add('active');
+		});
+	});
 
 
     var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
@@ -565,21 +643,31 @@
         enableUtc: false
     });
 
-	var audio = document.getElementById("myautoload");
+	document.addEventListener('DOMContentLoaded', function() {
+		var audio = document.getElementById("myautoload");
 
-    setTimeout(function() {
-    audio.play();
+		setTimeout(function() {
+			audio.play();
+		}, 500);
 
-    },500);
+		const audioButton = document.getElementById('audio');
+		const audioIcon = document.getElementById('audio-icon');
 
-	document.querySelector('.audio').addEventListener('click', function(event) {
-	event.preventDefault(); // This prevents the default behavior of the click event
-		if (audio.paused) {
-		audio.play(); // If audio is paused, play it
-	} else {
-		audio.pause(); // If audio is playing, pause it
-	}
+		audioButton.addEventListener('click', function(event) {
+			event.preventDefault(); // This prevents the default behavior of the click event
+
+			if (audio.paused) {
+				audio.play();
+				audioIcon.classList.remove('icon-mute');
+				audioIcon.classList.add('icon-volume');
+			} else {
+				audio.pause();
+				audioIcon.classList.remove('icon-volume');
+				audioIcon.classList.add('icon-mute');
+			}
+		});
 	});
+
 
 	function openDialog(dialogId) {
       var dialog = document.getElementById(dialogId);
@@ -594,6 +682,8 @@
         dialog.close();
       }
     }
+
+
 
 		</script>
 	</body>

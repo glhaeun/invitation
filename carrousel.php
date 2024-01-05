@@ -43,5 +43,6 @@
     </article>
   </div>
   <!-- partial -->
-    <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'></script><script  src="./script.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'></script>
+    <script  src="./script.js"></script>
   

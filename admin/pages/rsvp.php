@@ -95,10 +95,14 @@
 <?php 
     if($select_user->rowCount()>0){
         while ($fetch_user = $select_user ->fetch(PDO::FETCH_ASSOC)){
+            $status = "Guest";
+            if($fetch_user['guestId'] != "0") {
+                $status = "Registered";
+            }
             ?>
                         <tr>
                             <td><?=$index?></td>
-                            <td><?=$fetch_user['name']?></td>
+                            <td><?=$fetch_user['name']?>  (<?=$status?>)</td>
                             <td><?=$fetch_user['guest']?></td>
                             <td><?=$fetch_user['attend']?></td> 
                             <td><?=$fetch_user['number']?></td> 
@@ -135,7 +139,12 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        new DataTable('#dataTable');
+    </script>
 </body>
 
 </html>

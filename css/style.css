@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-gift .event-wrap {
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: 2px solid #6d9176;
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
   width: 100%;
@@ -477,7 +477,8 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-event .event-wrap .event-col {
   width: 50%;
   float: left;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 #fh5co-counter {
@@ -1565,7 +1566,7 @@ form label {
   width: 50px;
   height: 50px;
   display: table;
-  background: rgba(0, 0, 0, 0.5);
+  background: #BED0C2;
   color: #fff;
   text-align: center;
   -webkit-border-radius: 4px;
@@ -1581,6 +1582,10 @@ form label {
 .gototop a:hover, .gototop a:active, .gototop a:focus {
   text-decoration: none;
   outline: none;
+}
+
+.gototop a:hover {
+  background:#497554;
 }
 
 .fh5co-nav-toggle {

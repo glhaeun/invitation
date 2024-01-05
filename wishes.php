@@ -1,6 +1,6 @@
 <?php 
 
-    $query ="SELECT * FROM message";
+    $query ="SELECT * FROM message ORDER BY date DESC"; // Order by date in descending order
     $select_message =  $connect->prepare($query);
     $select_message -> execute();
 
@@ -12,6 +12,6 @@
 					</div> 
                     <?php
         }
-    }
+    } 
                                     
 ?>
