@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/styl.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/photo.css">
 	<link rel="stylesheet" href="css/story.css">
 
@@ -517,6 +517,7 @@
 	</div>
 
 	<div class="gototop js-top">
+		<a href="#" class="audio"><i class="icon-arrow-up"></i></a>
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	
@@ -548,6 +549,7 @@
 	<script>
 	
 
+
     var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
     simplyCountdown('.simply-countdown-one', {
@@ -563,12 +565,22 @@
         enableUtc: false
     });
 
-	var myadido = document.getElementById("myautoload");
+	var audio = document.getElementById("myautoload");
 
     setTimeout(function() {
-    myadido.play();
+    audio.play();
 
     },500);
+
+	document.querySelector('.audio').addEventListener('click', function(event) {
+	event.preventDefault(); // This prevents the default behavior of the click event
+		if (audio.paused) {
+		audio.play(); // If audio is paused, play it
+	} else {
+		audio.pause(); // If audio is playing, pause it
+	}
+	});
+
 	function openDialog(dialogId) {
       var dialog = document.getElementById(dialogId);
       if (dialog) {
