@@ -40,38 +40,6 @@
                     <span>RSVP</span></a>
             </li>
 
-<hr class="sidebar-divider">
-
-<div class="sidebar-heading">
-    Data
-</div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="timelineTable.php" data-toggle="collapse" data-target="timeline_edit.phpcollapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-history" style="color: #000000;"></i>
-                    <span>Timeline</span>
-                </a>
-            </li>
-
-<!-- Nav Item - Utilities Collapse Menu -->
-<li class="nav-item">
-    <a class="nav-link collapsed" href="data.php" data-toggle="collapse" data-target="#collapseUtilities"
-        aria-expanded="true" aria-controls="collapseUtilities">
-        <i class="fas fa-user-friends" style="color: #000000;"></i>
-        <span>Bride and Groom Data</span>
-    </a>
-</li>
-
-<li class="nav-item">
-    <a class="nav-link collapsed" href="jadwal.php" data-toggle="collapse" data-target="#collapseUtilities"
-        aria-expanded="true" aria-controls="collapseUtilities">
-        <i class="fas fa-calendar-alt" style="color: #000000;"></i>
-        <span>Wedding Data</span>
-    </a>
-</li>
-
 
 
 </ul>
