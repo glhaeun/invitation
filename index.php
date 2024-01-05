@@ -51,18 +51,18 @@
 			<div class="row">
 				
 			<div class="col-xs-5">
-					<div id="fh5co-logo" style="display: flex; align-items: right;"><a href="index.html">Logo<strong>.</strong></a></div>
+					<div id="fh5co-logo" style="display: flex; align-items: right;"><a href="index.html">RS<strong>.</strong></a></div>
 				</div>
 
 				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">JE<strong>.</strong></a></div>
+					<div id="fh5co-logo"><a href="index.html"></a></div>
 				</div>
 				<div class="col-xs-5 text-right menu-1">
 					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
+						<li class="active"><a href="#home">Home</a></li>
 						<li><a href="#location">Location</a></li>
 						<li><a href="#story">Story</a></li>
-						<li class="has-dropdown"><a href="#fh5co-gallery">Gallery</a></li>
+						<li><a href="#fh5co-gallery">Gallery</a></li>
 						<li><a href="#attendance">RSVP</a></li>
 						<li><a href="#gift">Gifts</a></li>
 					</ul>
@@ -74,12 +74,12 @@
 
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
-		<div class="container">
+		<div class="container" id="home">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>John &amp; Emily</h1>
+							<h1>Robertus &amp; Sharon</h1>
 							<h2></h2>
 							<?php
 								// $records = readData();
@@ -115,7 +115,7 @@
 						<img src="images/groom.jpg" alt="groom" class="img-responsive">
 					</div>
 					<div class="desc-groom">
-						<h3>John Wilson</h3>
+						<h3>Robertus Wilson</h3>
 						<p>First Son of Mr. Samsudin Raylee & Ms. Yek Min</p>
 					</div>
 				</div>
@@ -125,7 +125,7 @@
 						<img src="images/bride.jpg" alt="groom" class="img-responsive">
 					</div>
 					<div class="desc-bride">
-						<h3>Emily Brown</h3>
+						<h3>Sharon Brown</h3>
 						<p>Second daughter of Mr. So ewanto Liang & Ms. Friska</p>
 					</div>
 				</div>
@@ -199,7 +199,7 @@
       <div class="row">
         <div class="col">
           <ul class="timeline">
-            <li>
+            <li >
               <div class="timeline-image" style="background-image: url(images/couple-1.jpg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -267,7 +267,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<span>Our Memories</span>
 					<h2>Wedding Gallery</h2>
-					<p>Picture of John Wilson & Emily Brown</p>
+					<p>Picture of Robertus Wilson & Sharon Brown</p>
 				</div>
 			</div>
 			<div class="row row-bottom-padded-md">
@@ -277,7 +277,7 @@
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> 
 						<a onclick="openDialog('dialog1');">
 							<div class="case-studies-summary">
-								<span>14 Photos</span>
+								<span>5 Photos</span>
 								<h2>Two Glas of Juice</h2>
 							</div>
 						</a>
@@ -291,7 +291,7 @@
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); ">
 						<a href="#" class="color-2">
 							<div class="case-studies-summary">
-								<span>30 Photos</span>
+								<span>5 Photos</span>
 								<h2>Timer starts now!</h2>
 							</div>
 						</a>
@@ -301,7 +301,7 @@
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
 						<a href="#" class="color-3">
 							<div class="case-studies-summary">
-								<span>90 Photos</span>
+								<span>5 Photos</span>
 								<h2>Beautiful sunset</h2>
 							</div>
 						</a>
@@ -309,7 +309,7 @@
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-4.jpg); ">
 						<a href="#" class="color-4">
 							<div class="case-studies-summary">
-								<span>12 Photos</span>
+								<span>5 Photos</span>
 								<h2>Company's Conference Room</h2>
 							</div>
 						</a>
@@ -318,7 +318,7 @@
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-5.jpg); ">
 							<a href="#" class="color-3">
 								<div class="case-studies-summary">
-									<span>50 Photos</span>
+									<span>5 Photos</span>
 									<h2>Useful baskets</h2>
 								</div>
 							</a>
@@ -326,7 +326,7 @@
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-6.jpg); ">
 							<a href="#" class="color-4">
 								<div class="case-studies-summary">
-									<span>45 Photos</span>
+									<span>5 Photos</span>
 									<h2>Skater man in the road</h2>
 								</div>
 							</a>
@@ -335,7 +335,7 @@
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-7.jpg); ">
 							<a href="#" class="color-4">
 								<div class="case-studies-summary">
-									<span>35 Photos</span>
+									<span>5 Photos</span>
 									<h2>Two Glas of Juice</h2>
 								</div>
 							</a>
@@ -344,7 +344,7 @@
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-8.jpg); "> 
 							<a href="#" class="color-5">
 								<div class="case-studies-summary">
-									<span>90 Photos</span>
+									<span>5 Photos</span>
 									<h2>Timer starts now!</h2>
 								</div>
 							</a>
@@ -352,7 +352,7 @@
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-9.jpg); ">
 							<a href="#" class="color-6">
 								<div class="case-studies-summary">
-									<span>56 Photos</span>
+									<span>5 Photos</span>
 									<h2>Beautiful sunset</h2>
 								</div>
 							</a>

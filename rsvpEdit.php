@@ -3,7 +3,7 @@ include 'rsvpDB.php';?>
 <form class="form-inline flexform" method="post">
 						<div class="col-md-2 col-sm-2">
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6" style="color:white;">
 							<div class="form-group">
 								<label for="name" class="sr-only">How many people?</label>
 								<input type="text" class="form-control"  name="name" id="name" placeholder="name" required disabled value="<?=$name ?>" >
