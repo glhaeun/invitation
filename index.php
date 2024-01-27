@@ -27,8 +27,9 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/photo.css">
+    <link rel="stylesheet" href="css/photo.css">
 	<link rel="stylesheet" href="css/story.css">
+	<link rel="stylesheet" href="css/modal.css">
 
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 
@@ -38,10 +39,12 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
+
+
 	</head>
 	<body>
 
-	<audio autoplay id="myautoload">
+	<audio id="myautoload">
 		<source src="Canon in D (Pachelbels Canon) - Cello .ogg" type="audio/ogg">
 		<source src="Canon in D (Pachelbels Canon) - Cello .mp3" type="audio/mpeg">
 	</audio>
@@ -523,6 +526,23 @@
 		<a href="#" id="audio"><i class="icon-volume" id="audio-icon"></i></a>
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+
+	<div id="welcomeModal" class="modal1">
+          <div class="hero" style="height: 100vh">
+            <div class="container1">
+              <h1 class="subtitle">Undangan Pernikahan</h1>
+                <h2 class="title"> Robertus & Kumala</h2>
+                  <h3 id="yth"></h3>
+                    <h3 id="to"></h3>
+                    <h1 id="invite" style="font-size: small; padding-left: 20px; padding-right: 20px">As the sun sets on a beautiful day, our hearts unite in celebration</h1>
+              <button id="openingButton" style="color: #e8ebee; box-sizing: border-box; 
+              font-weight: bold; text-transform: uppercase; padding: 8px; border: 0ch; border-radius: 5px;" onclick="closeWelcomeModal()">
+                Buka Undangan
+              </button>
+            </div>
+          <div class=""></div>
+        </div>
+      </div>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -550,6 +570,17 @@
 	<script src="js/pagination.js"></script>
 	<script>
 
+document.addEventListener("DOMContentLoaded", function () {
+  //open welcome modal
+  welcomeModal.style.display = "block";
+});
+
+var audio = document.getElementById("myautoload");
+
+function closeWelcomeModal() {
+  welcomeModal.style.display = "none";
+  audio.play()
+}
 	document.addEventListener('DOMContentLoaded', function() {
 		var copyBtnGroom = document.querySelector('.copy-btn-groom');
 		var groomRek = document.getElementById('groom_rek');
@@ -643,13 +674,6 @@
         enableUtc: false
     });
 
-	document.addEventListener('DOMContentLoaded', function() {
-		var audio = document.getElementById("myautoload");
-
-		setTimeout(function() {
-			audio.play();
-		}, 500);
-
 		const audioButton = document.getElementById('audio');
 		const audioIcon = document.getElementById('audio-icon');
 
@@ -666,7 +690,7 @@
 				audioIcon.classList.add('icon-mute');
 			}
 		});
-	});
+	
 
 
 	function openDialog(dialogId) {
