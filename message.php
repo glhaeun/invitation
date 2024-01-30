@@ -1,14 +1,14 @@
                 <form class="form-inline flexform" style="gap:20px;" method="post">
 						<div class="col-md-2 col-sm-2">
 						</div>
-						<div class="col-md-6 mb-5">
+						<div class="col-md-6 mb-5"  style="width:80%;">
 								<input style="text-align: center; width: 100%"  type="text" class="form-control"  name="name" id="name" placeholder="Enter Name" required
 								<?php if (!$_SESSION['guestMode'] && isset($_SESSION['user'])) : ?>
 									value="<?= $_SESSION['user'] ?>"
 								<?php endif; ?>>
 						</div>
 
-                        <div class="col-md-6 mb-5">
+                        <div class="col-md-6 mb-5" style="width:80%;">
 								<textarea style="text-align: center; width: 100%"  type="text" class="form-control" rows="5"  name="message" id="message" placeholder="Enter Message" required></textarea>
 						</div>
 

@@ -149,34 +149,18 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="display-t">
-					<div class="display-tc">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<h3>Main Ceremony</h3>
-									<div class="event-col">
-										<i class="icon-clock"></i>
-										<span>4:00 PM</span>
-										<span>6:00 PM</span>
-									</div>
-									<div class="event-col">
-										<i class="icon-calendar"></i>
-										<span>Monday 28</span>
-										<span>November, 2023</span>
-									</div>
-									<p><a href="https://www.bing.com/maps?mepi=107~Local~Unknown~Entity_Vertical_List_Card&ty=17&q=gereja+medan&segment=Local&ppois=3.605849504470825_98.70277404785156_Yayasan+Gereja+HKBP+Pardamean_YN7999x18434442206480290465~3.5890352725982666_98.6680679321289_Gereja+Pentakosta+di+Indonesia+%28GPdI%29_YN7999x14723516518641445123~&sei=0&cp=3.605939~98.702545&child=%26ty%3D18%26q%3DYayasan%2520Gereja%2520HKBP%2520Pardamean%26ss%3Dypid.YN7999x18434442206480290465%26segment%3DLocal%26ppois%3D3.605849504470825_98.70277404785156_Yayasan%2520Gereja%2520HKBP%2520Pardamean_YN7999x18434442206480290465~%26cp%3D3.60585~98.702774%26EnableMapViewChange%3Dtrue&FORM=SNAPST&lvl=11.0" style="color: white;"><u>Yayasan Gereja HKBP Pardamean</u></a></p>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6 text-center">
+				<div class="display-t" >
+					<div class="display-tc" style="display: flex; flex-direction: column;">
+						<div class="col-md-10 col-md-offset-1" style="display: flex; justify-content: center;">
+							<div class="col-md-12 col-sm-10 text-center">
 								<div class="event-wrap animate-box">
 									<h3>Wedding Party</h3>
-									<div class="event-col">
+									<div class="event-col" style="margin-top: 40px; margin-bottom:40px;">
 										<i class="icon-clock"></i>
 										<span>7:00 PM</span>
 										<span>12:00 AM</span>
 									</div>
-									<div class="event-col">
+									<div class="event-col" style="margin-top: 40px; margin-bottom:40px;">
 										<i class="icon-calendar"></i>
 										<span>Monday 28</span>
 										<span>November, 2023</span>
@@ -185,9 +169,15 @@
 								</div>
 							</div>
 						</div>
+						<div class="row animate-box">
+							<div class="col-md-12" style="display: flex; justify-content: center; margin-top: 80px;">
+							<p><a href="#" class="btn btn-default btn-sm">Watch Live</a></p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 
@@ -202,7 +192,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row  animate-box">
         <div class="col">
           <ul class="timeline">
             <li class="timeline-inverted fadeInLeft animated">
@@ -267,6 +257,8 @@
     </div>
   </section>
 
+  
+
 	<div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container" id="gallery">
 			<div class="row">
@@ -276,7 +268,7 @@
 					<p>Picture of Robertus Wilson & Sharon Brown</p>
 				</div>
 			</div>
-			<div class="row row-bottom-padded-md">
+			<!-- <div class="row row-bottom-padded-md">
 				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
 						
@@ -289,9 +281,7 @@
 						</a>
 					</li>
 					<dialog id="dialog1">
-					<?php
-					require 'carrousel.php'
-					?>
+					
 						<button style="border-color: white;" onclick="closeDialog('dialog1');" aria-label="close" class="x">❌</button>
 					</dialog>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); ">
@@ -365,7 +355,13 @@
 						</li>
 					</ul>		
 				</div>
+			</div> -->
+			<div class="row animate-box" data-animate-effect="fadeUp"">
+			<?php
+				require 'tes.php';
+			?>
 			</div>
+			
 		</div>
 	</div>
 
@@ -379,6 +375,7 @@
 					</div>
 				</div>
 				<?php
+
 					require 'message.php';
 				?>
 				<!-- <div class="row">
@@ -395,7 +392,7 @@
 						</div>
 					</div>
 				</div> -->
-				<div class="items-pagination" id="paginationContainer" >
+				<div class="items-pagination" id="paginationContainer" style="margin-top:80px;" >
 					<!-- <div class="item">
 						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">Nathan</span><p>2023-12-05 08:31:43</p><blockquote style="background-color: #8f989f"><p style="color: white;">Bless</p></blockquote></div>
 					</div>
@@ -448,26 +445,22 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Are You Attending?</h2>
-					<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
+					<?php 
+						if($_SESSION['guestMode']){
+							?>
+							<p>This is preview mode, please input the correct link to use the RSVP. Thanks.</p>
+							<?php
+						} else {
+							?>
+							<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
+							<?php
+						}
+					?>
 				</div>
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-10 col-md-offset-1">
 					<?php
-
-					// function readData() {
-					// 	$filename = 'data.txt';
-					// 	if (file_exists($filename)) {
-					// 		$data = file_get_contents($filename);
-					// 		return json_decode($data, true);
-					// 	}
-					// 	return [];
-					// }
-
-					// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-					// 	// Update existing record	
-						
-					// }
 
 					?>
 					
@@ -476,6 +469,12 @@
 					} else {
 						require 'rsvpEdit.php';
 					} ?>
+				</div>
+			</div>
+			<div class="row animate-box
+			">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<p>Please refresh to edit your response.</p>
 				</div>
 			</div>
 			</div>
@@ -494,23 +493,14 @@
 			<div class="row">
 				<div class="display-t">
 					<div class="display-tc">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="col-md-6 col-sm-6 text-center">
+					<div class="col-md-10 col-md-offset-1" style="display: flex; justify-content: center;">
+							<div class="col-md-12 col-sm-10 text-center">
 								<div class="event-wrap animate-box gift-box">
 									<h3>Groom</h3>
 										<i class="icon-clock"></i>
 										<span>BCA</span>
 										<span id="groom_rek">123123123</span>
     									<p><a class="btn btn-default btn-sm copy-btn-groom">Copy</a></p>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<h3>Bride</h3>
-									<i class="icon-clock"></i>
-									<span>BCA</span>
-									<span id="bride_rek">123123123</span>
-									<p><a class="btn btn-default btn-sm copy-btn-bride">Copy</a></p>
 								</div>
 							</div>
 						</div>
@@ -530,14 +520,14 @@
 	<div id="welcomeModal" class="modal1">
           <div class="hero" style="height: 100vh">
             <div class="container1">
-              <h1 class="subtitle">Undangan Pernikahan</h1>
-                <h2 class="title"> Robertus & Kumala</h2>
+              <h1 class="subtitle">Wedding Invitation</h1>
+                <h2 class="title"> Robert & Sharon</h2>
                   <h3 id="yth"></h3>
                     <h3 id="to"></h3>
                     <h1 id="invite" style="font-size: small; padding-left: 20px; padding-right: 20px">As the sun sets on a beautiful day, our hearts unite in celebration</h1>
               <button id="openingButton" style="color: #e8ebee; box-sizing: border-box; 
               font-weight: bold; text-transform: uppercase; padding: 8px; border: 0ch; border-radius: 5px;" onclick="closeWelcomeModal()">
-                Buka Undangan
+                Open Card
               </button>
             </div>
           <div class=""></div>
@@ -659,7 +649,8 @@ function closeWelcomeModal() {
 	});
 
 
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+	var d = new Date(2024, 2, 9, 18, 0, 0, 0);
+	console.log(d)
 
     simplyCountdown('.simply-countdown-one', {
         year: d.getFullYear(),

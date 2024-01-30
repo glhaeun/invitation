@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/carousel.css">
+<link rel="stylesheet" href="./css/c.css">
 <div class="cont">
     <aside class="carousel">
       <div class="carousel__wrapper">

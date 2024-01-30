@@ -5,19 +5,49 @@
 						<div class="col-md-6" style="color:white;">
 							<div class="form-group">
 								<label for="name" class="sr-only">How many people?</label>
-								<input type="text" class="form-control"  name="name" id="name" placeholder="name" required>
+								<?php 
+									if($_SESSION['guestMode']){
+										?>
+										<input type="text" class="form-control"  name="name" id="name" placeholder="name" disabled>
+										<?php
+									} else {
+										?>
+										<input type="text" class="form-control"  name="name" id="name" placeholder="name" required>
+										<?php
+									}
+								?>
 							</div>
 							<div class="form-group">
 								<label>Attendance</label>
 								<div>
 									<label>
-										<input type="radio" name="attendance" value="Yes" onclick="showInput()" required>
+									<?php 
+										if($_SESSION['guestMode']){
+											?>
+											<input type="radio" name="attendance" value="Yes" onclick="showInput()" disabled>
+											<?php
+										} else {
+											?>
+											<input type="radio" name="attendance" value="Yes" onclick="showInput()" required>
+											<?php
+										}
+									?>
 										Yes, I will attend
 									</label>
 								</div>
 								<div>
 									<label>
-										<input type="radio" name="attendance" value="No" onclick="hideInput()" required>
+									<?php 
+										if($_SESSION['guestMode']){
+											?>
+											<input type="radio" name="attendance" value="No" onclick="hideInput()" disabled>
+											<?php
+										} else {
+											?>
+											<input type="radio" name="attendance" value="No" onclick="hideInput()" required>
+											<?php
+										}
+									?>
 										Sorry, I can't make it
 									</label>
 								</div>
@@ -40,7 +70,17 @@
 							</div>
 						</div>
 						<div class="col-md-4">
-							<input type="submit" name="attend" class="btn btn-default btn-block" value="Submit">
+									<?php 
+										if($_SESSION['guestMode']){
+											?>
+											<input type="submit" name="attend" class="btn btn-default btn-block" value="Submit" disabled>
+											<?php
+										} else {
+											?>
+												<input type="submit" name="attend" class="btn btn-default btn-block" value="Submit">
+											<?php
+										}
+									?>
 						</div>
 						<div class="col-md-2 col-sm-2"></div>	
 					</form>

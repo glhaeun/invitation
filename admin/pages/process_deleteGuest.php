@@ -15,6 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $delete = $connect->prepare($query);
             $delete->execute([$deleteId]);
 
+            $query = "DELETE FROM rsvp WHERE guestId = ?";
+            $delete = $connect->prepare($query);
+            $delete->execute([$deleteId]);
+
             // $query = "DELETE FROM message_rsvp WHERE email = ?";
             // $update = $connect->prepare($query);
             // $update->execute([$emailUser['email']]);

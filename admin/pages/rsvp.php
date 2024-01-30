@@ -102,7 +102,7 @@
             ?>
                         <tr>
                             <td><?=$index?></td>
-                            <td><?=$fetch_user['name']?>  (<?=$status?>)</td>
+                            <td><?=$fetch_user['name']?></td>
                             <td><?=$fetch_user['guest']?></td>
                             <td><?=$fetch_user['attend']?></td> 
                             <td><?=$fetch_user['number']?></td> 

@@ -12,6 +12,13 @@
 					</div> 
                     <?php
         }
-    } 
+    } else {
+        ?>
+                    <div class="item">
+						<div class="testimony-slide active text-center"><span style="margin-bottom: 0px;">
+                        <blockquote style="background-color: #bed0c2"><p style="color: white;">Be the first one to send message to our newly weds!</p></blockquote></div>
+					</div> 
+                    <?php
+    }
                                     
 ?>
