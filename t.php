@@ -118,7 +118,7 @@
 			<div class="couple-wrap animate-box">
 				<div class="couple-half">
 					<div class="groom">
-						<img src="images/groom.jpg" alt="groom" class="img-responsive">
+						<img src="images/groom_portrait.jpg" alt="groom" class="img-responsive" style="object-fit:cover;">
 					</div>
 					<div class="desc-groom">
 						<h3>Robertus Wilson</h3>
@@ -128,7 +128,7 @@
 				<p class="heart text-center"><i class="icon-heart2"></i></p>
 				<div class="couple-half">
 					<div class="bride">
-						<img src="images/bride.jpg" alt="groom" class="img-responsive">
+						<img src="images/bride_portrait.jpg" alt="groom" class="img-responsive" style="object-fit:cover;">
 					</div>
 					<div class="desc-bride">
 						<h3>Sharon Brown</h3>
@@ -189,10 +189,12 @@
           <h2>Cerita Kami</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, similique non soluta nulla asperiores
             voluptatem.</p>
+		<p><a href="./cerita/cerita/index.php" class="btn btn-default btn-sm" style="background-color: #497554; color: white;">Play Game</a></p>
+
         </div>
       </div>
 
-      <div class="row  animate-box">
+      <!-- <div class="row  animate-box">
         <div class="col">
           <ul class="timeline">
             <li class="timeline-inverted fadeInLeft animated">
@@ -253,7 +255,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
